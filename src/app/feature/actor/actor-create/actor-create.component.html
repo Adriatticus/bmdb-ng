@@ -1,0 +1,31 @@
+<div class="p-4">
+    <h1>{{ title }}</h1>
+    <table>
+      <tr>
+        <td>First Name:</td>
+        <td>
+          <input [(ngModel)]="newActor.firstName" type="text" />
+        </td>
+      </tr>
+      <tr>
+        <td>Last Name:</td>
+        <td>
+          <input [(ngModel)]="newActor.lastName" type="text" />
+        </td>
+      </tr>
+      <tr>
+        <td>Gender:</td>
+        <td>
+          <input [(ngModel)]="newActor.gender" type="text" />
+        </td>
+      </tr>
+      <tr>
+        <td>Birthdate:</td>
+        <td>
+          <input [(ngModel)]="newActor.birthdate" type="date" />
+        </td>
+      </tr>
+    </table>
+    <button (click)="addActor()">Add Actor</button>
+  </div>
+  

@@ -1,0 +1,48 @@
+<div class="p-4"></div>
+    <span class="component-title">
+        <h1>{{title}}</h1>
+    </span>
+    <div *ngIf="newCredit">
+        <main class="single">
+            <table class="table table-sm">
+                <tr>
+                    <td>Movie:</td>
+                    <td>
+                        <select
+                        [(ngModel)]="newCredit.movie"
+                        class="rounded"
+                        [compareWith]="compMovie"
+                        >
+                        <option *ngFor="let m of movies" [ngValue]="m">
+                            {{m.title}}
+                        </option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Actor:</td>
+                    <td>
+                        <select
+                        [(ngModel)]="newCredit.actor"
+                        class="rounded"
+                        [compareWith]="compActor"
+                        >
+                        <option *ngFor="let a of actors" [ngValue]="a">
+                            {{a.firstName}}, {{a.lastName}}
+                        </option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Role:</td>
+                    <td>
+                        <input [(ngModel)]="newCredit.role" type="text">
+                    </td>
+                </tr>
+            </table>
+        </main>
+        <span>
+            <button (click)="addCredit()" class="btn btn-sm btn-primary">Add Credit</button>
+        </span>
+    </div>
+
