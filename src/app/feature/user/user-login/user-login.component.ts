@@ -37,7 +37,7 @@ export class UserLoginComponent implements OnInit, OnDestroy {
         // what is happening here? how do we end up here, inside of "next"?
         // this is a successful log in and now we're setting the response from such success
         this.sysSvc.loggedInUser = resp;
-        console.log('Successful login', this.user);
+        console.log('Successful login', this.userLogin.username);
         this.router.navigateByUrl('movie-list');
         //nav to movie-list
       },
