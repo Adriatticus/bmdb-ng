@@ -13,6 +13,8 @@ export class MovieListComponent implements OnInit, OnDestroy {
   title: string = 'Movie-List';
   movies!: Movie[];
   subscription!: Subscription;
+  sortOrder: string = 'asc';
+  sortCriteria: string = 'id';
 
   constructor(private movieSvc: MovieService, private sysSvc: SystemService) {}
 
@@ -38,5 +40,12 @@ export class MovieListComponent implements OnInit, OnDestroy {
         alert('Error deleting movie for id: ' + id);
       },
     });
+  }
+
+  sortBy(column: string): void {
+    if (column == this.sortCriteria) {
+      this.sortOrder = this.sortOrder == 'desc' ? 'asc' : 'desc';
+    }
+    this.sortCriteria = column;
   }
 }
