@@ -14,12 +14,9 @@ export class MovieListComponent implements OnInit, OnDestroy {
   title: string = 'Movie-List';
   movies!: Movie[];
   subscription!: Subscription;
-<<<<<<< HEAD
   loggedInUser!: User;
-=======
   sortOrder: string = 'asc';
   sortCriteria: string = 'id';
->>>>>>> 67269438e980c74b188794b89b5c8e70cc6c0c69
 
   constructor(private movieSvc: MovieService, private sysSvc: SystemService) {}
 
