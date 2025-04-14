@@ -23,6 +23,7 @@ import { CreditCreateComponent } from './feature/credit/credit-create/credit-cre
 import { CreditEditComponent } from './feature/credit/credit-edit/credit-edit.component';
 import { CreditDetailComponent } from './feature/credit/credit-detail/credit-detail.component';
 import { UserLoginComponent } from './feature/user/user-login/user-login.component';
+import { SortPipe } from './pipe/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { UserLoginComponent } from './feature/user/user-login/user-login.compone
     CreditEditComponent,
     CreditDetailComponent,
     UserLoginComponent,
+    SortPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideHttpClient(withInterceptorsFromDi())],

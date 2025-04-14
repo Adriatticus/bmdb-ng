@@ -7,11 +7,11 @@
   </section>
   <table *ngIf="movies" class="table table-striped table-hover">
     <thead>
-      <th><a (click)="sortBy('[id]')">Id</a></th>
-      <th>Title</th>
-      <th>Year</th>
-      <th>Rating</th>
-      <th>Director</th>
+      <th><a class="listSortClick" (click)="sortBy('id')">Id</a></th>
+      <th><a class="listSortClick" (click)="sortBy('id')">Title</a></th>
+      <th><a class="listSortClick" (click)="sortBy('id')">Year</a></th>
+      <th><a class="listSortClick" (click)="sortBy('id')">Rating</a></th>
+      <th><a class="listSortClick" (click)="sortBy('id')">Director</a></th>
       <th>Action</th>
     </thead>
     <tbody>
